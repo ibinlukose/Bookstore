@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './User/Pages/Home';
 import Contact from './User/Pages/Contact';
 import Books from './User/Pages/Books';
-import Auth from './pages/Auth';
+import Auth from './Pages/Auth';
 import Profile from './User/Pages/Profile';
 import View from './User/Pages/View';
 import AdminDashBoard from './Admin/Pages/AdminDashBoard';
@@ -29,7 +29,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/books' element={<Books />} />
         <Route path='/login' element={<Auth />} />
-        <Route path='/register' element={<Auth />} />
+        <Route path='/register' element={<Auth insideRegister />} />
 
         <Route path='/profile/:id' element={<Profile />} />
         <Route path='/books/:id' element={<View />} />
