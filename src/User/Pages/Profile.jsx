@@ -3,6 +3,7 @@ import Header from '../Components/Header'
 import Footer from '../../Components/Footer'
 import { FaCircleCheck } from 'react-icons/fa6'
 import Edit from '../Components/Edit'
+import UploadBooks from '../Components/UploadBooks'
 
 function Profile() {
   const[currentTab,SetCurrentTab] = useState(1)
@@ -33,7 +34,7 @@ This is your personal space where you can manage your account, explore your read
           <p onClick={()=>(SetCurrentTab(2))} className={currentTab==1 ?'p-4 border-gray-200 border-1 border-t border-r rounded cursor-poniter':'p-4 border-gray-200 border-b  rounded cursor-poniter'}>Upload book status</p>
           <p onClick={()=>(SetCurrentTab(3))} className={currentTab==1 ?'p-4 border-gray-200 border-1 border-t border-r rounded cursor-poniter':'p-4 border-gray-200 border-b  rounded cursor-poniter'}>Purchase History</p>
         </div>
-      { currentTab==1 && <div>upload books </div>}
+      { currentTab==1 && <div><UploadBooks/> </div>}
       { currentTab==2 && <div> upload bookstatus</div>}
      {  currentTab==3 && <div>purchase history</div>}
 
